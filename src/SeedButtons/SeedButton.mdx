@@ -1,0 +1,33 @@
+import SeedButton from "./SeedButton";
+import {
+  Story,
+  Props,
+  Description,
+  Preview,
+} from "@storybook/addon-docs/blocks";
+
+# SeedButton
+
+<Description of={SeedButton} />
+
+## Props
+
+SeedButton 컴포넌트에서 사용되는 Props
+
+<Props of={SeedButton} />
+
+## Default SeedButton
+
+white seed 버튼
+
+<Preview>
+  <Story id="seedbutton--white" />
+</Preview>
+
+## Black SeedButton
+
+black SeedButton 보여주고 싶으면 `backgroundColor` props 를 `black` 설정
+
+<Preview>
+  <Story id="seedbutton--black" />
+</Preview>
