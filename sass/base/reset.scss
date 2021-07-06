@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
 }
 
 /**
@@ -20,11 +21,13 @@ html {
 a {
   color: $brand-color;
   text-decoration: none;
-
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
+  font-family: "Spoqa Han Sans Neo", sans-serif;
 }
 
 //button
+button {
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+}
+
+//font
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
