@@ -15,22 +15,44 @@ export default {
 
 export const Seed = () => {
   const options = {
-    primary900: "primary700",
-    primary800: "primary700",
+    primary900: "primary900",
+    primary800: "primary800",
     primary700: "primary700",
-    primary600: "primary700",
-    primary500: "primary700",
-    primary400: "primary700",
-    primary300: "primary700",
-    primary200: "primary700",
-    primary100: "primary700",
-    primary50: "primary700",
+    primary600: "primary600",
+    primary500: "primary500",
+    primary400: "primary400",
+    primary300: "primary300",
+    primary200: "primary200",
+    primary100: "primar100",
+    primary50: "primary50",
+    primaryT48: "primaryT48",
+    primaryT40: "primaryT40",
+    primaryT32: "primaryT32",
+    primaryT24: "primaryT24",
+    primaryT16: "primaryT16",
+    primaryT8: "primaryT8",
+    black900: "black900",
+    black800: "black800",
+    black700: "black700",
+    black600: "black600",
+    black500: "black500",
+    black400: "black400",
+    black300: "black300",
+    black200: "black200",
+    black100: "black100",
+    black50: "black50",
     blackT87: "blackT87",
     blackT60: "blackT60",
     blackT38: "blackT38",
+    blackT48: "blackT48",
+    blackT40: "blackT40",
+    blackT32: "blackT32",
+    blackT24: "blackT24",
+    blackT16: "blackT16",
+    blackT8: "blackT8",
   };
 
-  const value = select("colors", options, "blackT38") as color["color"];
+  const value = select("colors", options, "blackT87") as color["color"];
 
   return (
     <Typograpy props={{ color: value }} component="span">
@@ -42,8 +64,3 @@ export const Seed = () => {
 Seed.story = {
   name: "Default",
 };
-
-export const blackT38 = () => <Typograpy props={{ color: "blackT38" }}>기본 값입니다.</Typograpy>;
-export const primary700 = () => (
-  <Typograpy props={{ color: "primary700" }}>기본 값입니다.</Typograpy>
-);
