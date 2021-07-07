@@ -1,0 +1,113 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+///// primary
+.primary900 {
+  @include mixins.color(variables.$primary-900);
+}
+.primary800 {
+  @include mixins.color(variables.$primary-800);
+}
+.primary700 {
+  @include mixins.color(variables.$primary-700);
+}
+.primary600 {
+  @include mixins.color(variables.$primary-600);
+}
+.primary500 {
+  @include mixins.color(variables.$primary-500);
+}
+.primary400 {
+  @include mixins.color(variables.$primary-400);
+}
+.primary300 {
+  @include mixins.color(variables.$primary-300);
+}
+.primary200 {
+  @include mixins.color(variables.$primary-200);
+}
+.primary100 {
+  @include mixins.color(variables.$primary-100);
+}
+.primary50 {
+  @include mixins.color(variables.$primary-50);
+}
+
+.primaryT48 {
+  @include mixins.color(variables.$primary-T48);
+}
+.primaryT40 {
+  @include mixins.color(variables.$primary-T40);
+}
+.primaryT32 {
+  @include mixins.color(variables.$primary-T32);
+}
+.primaryT24 {
+  @include mixins.color(variables.$primary-T24);
+}
+.primaryT16 {
+  @include mixins.color(variables.$primary-T16);
+}
+.primaryT8 {
+  @include mixins.color(variables.$primary-T8);
+}
+
+.black900 {
+  @include mixins.color(variables.$black-900);
+}
+.black800 {
+  @include mixins.color(variables.$black-800);
+}
+.black700 {
+  @include mixins.color(variables.$black-700);
+}
+.black600 {
+  @include mixins.color(variables.$black-600);
+}
+.black500 {
+  @include mixins.color(variables.$black-500);
+}
+.black400 {
+  @include mixins.color(variables.$black-400);
+}
+.black300 {
+  @include mixins.color(variables.$black-300);
+}
+.black200 {
+  @include mixins.color(variables.$black-200);
+}
+.black100 {
+  @include mixins.color(variables.$black-100);
+}
+.black50 {
+  @include mixins.color(variables.$black-50);
+}
+
+.blackT60 {
+  @include mixins.color(variables.$c-black-T60);
+}
+.blackT87 {
+  @include mixins.color(variables.$c-defaultTypo);
+}
+.blackT38 {
+  @include mixins.color(variables.$c-disabledTypo);
+}
+
+.blackT48 {
+  @include mixins.color(variables.$black-T48);
+}
+.blackT40 {
+  @include mixins.color(variables.$black-T40);
+}
+.blackT32 {
+  @include mixins.color(variables.$black-T32);
+}
+.blackT24 {
+  @include mixins.color(variables.$black-T24);
+}
+.blackT16 {
+  @include mixins.color(variables.$black-T16);
+}
+.blackT8 {
+  @include mixins.color(variables.$black-T8);
+}
