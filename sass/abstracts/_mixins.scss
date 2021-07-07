@@ -1,0 +1,6 @@
+@use 'variables' as v;
+
+@mixin typo($size: 12px) {
+  font-size: $size;
+  color: v.$c-defaultTypo;
+}
