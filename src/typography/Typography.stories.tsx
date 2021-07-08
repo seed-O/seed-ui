@@ -1,7 +1,8 @@
 import React from "react";
 import Typograpy from "./Typography";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import { color } from "./typography.types";
+import { color } from "../types/color.types";
+import { size, bold, align } from "./typography.types";
 //@ts-ignore
 
 export default {
@@ -14,7 +15,7 @@ export default {
 };
 
 export const Seed = () => {
-  const options = {
+  const colors = {
     primary900: "primary900",
     primary800: "primary800",
     primary700: "primary700",
@@ -52,10 +53,54 @@ export const Seed = () => {
     blackT8: "blackT8",
   };
 
-  const value = select("colors", options, "blackT87") as color["color"];
+  const color = select("colors", colors, "blackT87") as color["color"];
+
+  const sizes = {
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    h6: "h6",
+    s1: "s1",
+    s2: "s2",
+    body1: "body1",
+    body2: "body2",
+    button: "button",
+    caption: "caption",
+    overline: "overline",
+  };
+
+  const size = select("sizes", sizes, "body1") as size["size"];
+
+  const bolds = {
+    100: "100",
+    200: "200",
+    300: "300",
+    400: "400",
+    500: "500",
+    600: "600",
+    700: "700",
+    800: "800",
+    900: "900",
+    normal: "nomarl",
+    bold: "bold",
+    initial: "initial",
+    inherit: "inherit",
+  };
+  const bold = select("weight", bolds, "normal") as bold["bold"];
+
+  const aligns = {
+    left: "left",
+    right: "right",
+    center: "center",
+    justify: "justify",
+  };
+
+  const align = select("aligns", aligns, "left") as align["align"];
 
   return (
-    <Typograpy props={{ color: value }} component="span">
+    <Typograpy props={{ color: color, size: size, bold: bold, align: align }}>
       기본 값입니다
     </Typograpy>
   );
