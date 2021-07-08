@@ -3,7 +3,15 @@ import { TypographyType } from "./typography.types";
 import "../../sass/main.scss";
 
 const Typograpy: React.FC<TypographyType<HTMLSpanElement>> = (
-  { props: { color = "blackT87", size = "body1", bold = "inherit", align = "left" }, children },
+  {
+    props: {
+      color = "blackT87",
+      size = "body1",
+      bold = "inherit",
+      align = "left",
+    },
+    children,
+  },
   props
 ) => {
   return (
