@@ -25,7 +25,11 @@ export const Seed = () => {
   };
   const fullwidth = select("fullwidth", boolean, false) as boolean;
   const noneBorder = select("noneBorder", boolean, false) as boolean;
-  return <SeedButton bgColor={value} fullWidth={fullwidth} noneBorder={noneBorder} />;
+  return (
+    <SeedButton bgColor={value} fullWidth={fullwidth} noneBorder={noneBorder}>
+      테스트 입니다
+    </SeedButton>
+  );
 };
 
 Seed.story = {

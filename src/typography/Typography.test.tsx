@@ -5,7 +5,7 @@ import { TypographyType } from "./typography.types";
 import Typograpy from "./Typography";
 
 describe("typograpy Component", () => {
-  let props: TypographyType;
+  let props: TypographyType<HTMLSpanElement>;
 
   beforeEach(() => {
     props = {
