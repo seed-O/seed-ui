@@ -1,1 +1,24 @@
+@use '../base/color' as c;
+@use '../abstracts/mixins';
 @import "../abstracts/variables";
+
+.seed-button {
+  background-color: black;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 19px;
+  color: #ffffff;
+  cursor: pointer;
+  &-border {
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  &-bg {
+    @include c.bg;
+  }
+
+  &-fullwidth {
+    @include mixins.fullWidth;
+  }
+}

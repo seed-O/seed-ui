@@ -9,7 +9,7 @@ const Typograpy: React.FC<TypographyType<HTMLSpanElement>> = (
   return (
     <span
       data-testid={`seed-typograpy`}
-      className={`typo-${size} ${color} typo-weight${bold} typo-align${align}`}
+      className={`typo-${size} ${color} typo-weight${bold} typo-align-${align}`}
       {...props}
     >
       {children}

@@ -8,3 +8,17 @@
 @mixin color($color: v.$c-defaultTypo) {
   color: $color;
 }
+
+@mixin bgColor($bgColor: transparent, $color: v.$c-defaultTypo) {
+  background-color: $bgColor;
+  color: $color;
+  border-color: $bgColor;
+}
+
+@mixin fullWidth {
+  width: 100%;
+}
+
+@mixin noneBorder {
+  border: none;
+}

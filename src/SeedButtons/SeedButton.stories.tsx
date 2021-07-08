@@ -3,6 +3,7 @@ import SeedButton from "./SeedButton";
 import { withKnobs, select } from "@storybook/addon-knobs";
 //@ts-ignore
 import mdx from "./SeedButton.mdx";
+import { color, colors } from "../types/color.types";
 
 export default {
   title: "SeedButton",
@@ -17,19 +18,16 @@ export default {
 };
 
 export const Seed = () => {
-  const options = {
-    black: "black",
-    white: "white",
+  const value = select("colors", colors, "white") as color["color"];
+  const boolean = {
+    true: true,
+    false: false,
   };
-
-  const value = select("colors", options, "white") as "black" | "white";
-
-  return <SeedButton backgroundColor={value} />;
+  const fullwidth = select("fullwidth", boolean, false) as boolean;
+  const noneBorder = select("noneBorder", boolean, false) as boolean;
+  return <SeedButton bgColor={value} fullWidth={fullwidth} noneBorder={noneBorder} />;
 };
 
 Seed.story = {
   name: "Default",
 };
-
-export const black = () => <SeedButton backgroundColor="black" />;
-export const white = () => <SeedButton backgroundColor="white" />;

@@ -1,6 +1,7 @@
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 
+//fontColor
 ///// primary
 .primary900 {
   @include mixins.color(variables.$primary-900);
@@ -110,4 +111,121 @@
 }
 .blackT8 {
   @include mixins.color(variables.$black-T8);
+}
+
+//background color
+@mixin bg {
+  &-white {
+    @include mixins.bgColor(variables.$c-altnerativeTypo);
+    border-color: variables.$c-defaultTypo;
+  }
+  &-primary900 {
+    @include mixins.bgColor(variables.$primary-900, variables.$c-altnerativeTypo);
+  }
+  &-primary800 {
+    @include mixins.bgColor(variables.$primary-800, variables.$c-altnerativeTypo);
+  }
+  &-primary700 {
+    @include mixins.bgColor(variables.$primary-700, variables.$c-altnerativeTypo);
+  }
+  &-primary600 {
+    @include mixins.bgColor(variables.$primary-600, variables.$c-altnerativeTypo);
+  }
+  &-primary500 {
+    @include mixins.bgColor(variables.$primary-500, variables.$c-altnerativeTypo);
+  }
+  &-primary400 {
+    @include mixins.bgColor(variables.$primary-400, variables.$c-altnerativeTypo);
+  }
+  &-primary300 {
+    @include mixins.bgColor(variables.$primary-300, variables.$c-altnerativeTypo);
+  }
+  &-primary200 {
+    @include mixins.bgColor(variables.$primary-200);
+  }
+  &-primary100 {
+    @include mixins.bgColor(variables.$primary-100);
+  }
+  &-primary50 {
+    @include mixins.bgColor(variables.$primary-50);
+  }
+
+  &-primaryT48 {
+    @include mixins.bgColor(variables.$primary-T48);
+  }
+  &-primaryT40 {
+    @include mixins.bgColor(variables.$primary-T40);
+  }
+  &-primaryT32 {
+    @include mixins.bgColor(variables.$primary-T32);
+  }
+  &-primaryT24 {
+    @include mixins.bgColor(variables.$primary-T24);
+  }
+  &-primaryT16 {
+    @include mixins.bgColor(variables.$primary-T16);
+  }
+  &-primaryT8 {
+    @include mixins.bgColor(variables.$primary-T8);
+  }
+
+  &-black900 {
+    @include mixins.bgColor(variables.$black-900, variables.$c-altnerativeTypo);
+  }
+  &-black800 {
+    @include mixins.bgColor(variables.$black-800, variables.$c-altnerativeTypo);
+  }
+  &-black700 {
+    @include mixins.bgColor(variables.$black-700, variables.$c-altnerativeTypo);
+  }
+  &-black600 {
+    @include mixins.bgColor(variables.$black-600, variables.$c-altnerativeTypo);
+  }
+  &-black500 {
+    @include mixins.bgColor(variables.$black-500, variables.$c-altnerativeTypo);
+  }
+  &-black400 {
+    @include mixins.bgColor(variables.$black-400);
+  }
+  &-black300 {
+    @include mixins.bgColor(variables.$black-300);
+  }
+  &-black200 {
+    @include mixins.bgColor(variables.$black-200);
+  }
+  &-black100 {
+    @include mixins.bgColor(variables.$black-100);
+  }
+  &-black50 {
+    @include mixins.bgColor(variables.$black-50);
+  }
+
+  &-blackT60 {
+    @include mixins.bgColor(variables.$c-black-T60);
+  }
+  &-blackT87 {
+    @include mixins.bgColor(variables.$c-defaultTypo);
+  }
+  &-blackT38 {
+    @include mixins.bgColor(variables.$c-disabledTypo);
+  }
+
+  &-blackT48 {
+    @include mixins.bgColor(variables.$black-T48);
+  }
+  &-blackT40 {
+    @include mixins.bgColor(variables.$black-T40);
+  }
+  &-blackT32 {
+    @include mixins.bgColor(variables.$black-T32);
+  }
+  &-blackT24 {
+    @include mixins.bgColor(variables.$black-T24);
+  }
+  &-blackT16 {
+    @include mixins.bgColor(variables.$black-T16);
+  }
+  &-blackT8 {
+    @include mixins.bgColor(variables.$black-T8);
+  }
 }

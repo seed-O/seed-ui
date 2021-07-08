@@ -1,6 +1,6 @@
 import React from "react";
 import { SeedButtonProps } from "./SeedButton.types";
-import "./SeedButton.scss";
+import "../../sass/main.scss";
 
 /**
  * Seed-ui의 Default 버튼
@@ -9,15 +9,18 @@ import "./SeedButton.scss";
  *
  */
 
-const SeedButton: React.FC<SeedButtonProps> = ({
-  backgroundColor = "white",
-}) => (
-  <button
-    data-testid={`seed-button`}
-    className={`seed-button seed-button-${backgroundColor}`}
-  >
-    Test
-  </button>
-);
+const SeedButton: React.FC<SeedButtonProps> = ({ bgColor = "white", fullWidth, noneBorder }) => {
+  console.log(fullWidth);
+  return (
+    <button
+      data-testid={`seed-button`}
+      className={`seed-button  ${
+        noneBorder ? "noneBorder" : "seed-button-border"
+      } seed-button-bg-${bgColor} ${fullWidth ? "seed-button-fullwidth" : ""} `}
+    >
+      Test
+    </button>
+  );
+};
 
 export default SeedButton;
