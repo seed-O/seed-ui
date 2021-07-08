@@ -1,6 +1,6 @@
 {
   "name": "pexpo2-component",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "pexpo2 component library",
   "author": "kinterch",
   "license": "MIT",
@@ -36,6 +36,7 @@
     "babel-preset-react-app": "^10.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
+    "postcss": "^8.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.52.7",

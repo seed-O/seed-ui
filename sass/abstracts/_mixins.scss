@@ -12,3 +12,17 @@
 @mixin borderColor($color: v.$black-400) {
   border-color: $color;
 }
+
+@mixin bgColor($bgColor: transparent, $color: v.$c-defaultTypo) {
+  background-color: $bgColor;
+  color: $color;
+  border-color: $bgColor;
+}
+
+@mixin fullWidth {
+  width: 100%;
+}
+
+@mixin noneBorder {
+  border: none;
+}

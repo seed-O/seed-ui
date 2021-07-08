@@ -1,54 +1,104 @@
 @use '../abstracts/mixins';
 @use '../abstracts/variables';
 
-.h1 {
-  @include mixins.typo(variables.$h1);
-}
+.typo {
+  &-h1 {
+    @include mixins.typo(variables.$h1);
+  }
 
-.h2 {
-  @include mixins.typo(variables.$h2);
-}
+  &-h2 {
+    @include mixins.typo(variables.$h2);
+  }
 
-.h3 {
-  @include mixins.typo(variables.$h3);
-}
+  &-h3 {
+    @include mixins.typo(variables.$h3);
+  }
 
-.h4 {
-  @include mixins.typo(variables.$h4);
-}
+  &-h4 {
+    @include mixins.typo(variables.$h4);
+  }
 
-.h5 {
-  @include mixins.typo(variables.$h5);
-}
+  &-h5 {
+    @include mixins.typo(variables.$h5);
+  }
 
-.h5 {
-  @include mixins.typo(variables.$h6);
-}
+  &-h6 {
+    @include mixins.typo(variables.$h6);
+  }
 
-.s1 {
-  @include mixins.typo(variables.$s1);
-}
+  &-s1 {
+    @include mixins.typo(variables.$s1);
+  }
 
-.s2 {
-  @include mixins.typo(variables.$s2);
-}
+  &-s2 {
+    @include mixins.typo(variables.$s2);
+  }
 
-.body1 {
-  @include mixins.typo(variables.$body1);
-}
+  &-body1 {
+    @include mixins.typo(variables.$body1);
+  }
 
-.body2 {
-  @include mixins.typo(variables.$body2);
-}
+  &-body2 {
+    @include mixins.typo(variables.$body2);
+  }
 
-.button {
-  @include mixins.typo(variables.$button);
-}
+  &-button {
+    @include mixins.typo(variables.$button);
+  }
 
-.caption {
-  @include mixins.typo(variables.$caption);
-}
+  &-caption {
+    @include mixins.typo(variables.$caption);
+  }
 
-.overline {
-  @include mixins.typo(variables.$overline);
+  &-overline {
+    @include mixins.typo(variables.$overline);
+  }
+
+  &-weightbold {
+    font-weight: bold;
+  }
+  &-weightinitial {
+    font-weight: initial;
+  }
+
+  &-weight100 {
+    font-weight: 100;
+  }
+  &-weight200 {
+    font-weight: 200;
+  }
+  &-weight300 {
+    font-weight: 300;
+  }
+  &-weight400 {
+    font-weight: 400;
+  }
+  &-weight500 {
+    font-weight: 500;
+  }
+  &-weight600 {
+    font-weight: 600;
+  }
+  &-weight700 {
+    font-weight: 700;
+  }
+  &-weight800 {
+    font-weight: 800;
+  }
+  &-weight900 {
+    font-weight: 900;
+  }
+
+  &-align-left {
+    text-align: left;
+  }
+  &-align-right {
+    text-align: right;
+  }
+  &-align-center {
+    text-align: center;
+  }
+  &-align-justify {
+    text-align: justify;
+  }
 }
