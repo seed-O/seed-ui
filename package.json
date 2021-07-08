@@ -1,6 +1,6 @@
 {
   "name": "pexpo2-component",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "pexpo2 component library",
   "author": "kinterch",
   "license": "MIT",
@@ -36,13 +36,14 @@
     "babel-preset-react-app": "^10.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
-    "node-sass": "^6.0.1",
+    "postcss": "^8.3.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.52.7",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-typescript2": "^0.30.0",
+    "sass": "^1.35.1",
     "sass-loader": "10.2.0",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"

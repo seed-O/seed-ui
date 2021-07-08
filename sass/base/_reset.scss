@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 html {
   box-sizing: border-box;
   font-family: "Spoqa Han Sans Neo", sans-serif;
@@ -19,7 +21,7 @@ html {
    * Basic styles for links
    */
 a {
-  color: $brand-color;
+  color: variables.$c-defaultTypo;
   text-decoration: none;
   font-family: "Spoqa Han Sans Neo", sans-serif;
 }
