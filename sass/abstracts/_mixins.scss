@@ -8,3 +8,7 @@
 @mixin color($color: v.$c-defaultTypo) {
   color: $color;
 }
+
+@mixin borderColor($color: v.$black-400) {
+  border-color: $color;
+}

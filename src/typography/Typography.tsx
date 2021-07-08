@@ -3,7 +3,12 @@ import { TypographyType } from "./typography.types";
 import "../../sass/main.scss";
 
 const Typograpy: React.FC<TypographyType> = ({
-  props: { color = "blackT87", size = "body1", bold = "inherit", align = "left" },
+  props: {
+    color = "blackT87",
+    size = "body1",
+    bold = "inherit",
+    align = "left",
+  },
   children,
 }) => {
   return (
