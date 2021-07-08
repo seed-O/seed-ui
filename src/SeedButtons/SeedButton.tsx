@@ -9,18 +9,19 @@ import "../../sass/main.scss";
  *
  */
 
-const SeedButton: React.FC<SeedButtonProps> = ({ bgColor = "white", fullWidth, noneBorder }) => {
-  console.log(fullWidth);
-  return (
-    <button
-      data-testid={`seed-button`}
-      className={`seed-button  ${
-        noneBorder ? "noneBorder" : "seed-button-border"
-      } seed-button-bg-${bgColor} ${fullWidth ? "seed-button-fullwidth" : ""} `}
-    >
-      Test
-    </button>
-  );
-};
+const SeedButton: React.FC<SeedButtonProps> = (
+  { bgColor = "white", fullWidth, noneBorder, children },
+  props
+) => (
+  <button
+    data-testid={`seed-button`}
+    className={`seed-button  ${
+      noneBorder ? "noneBorder" : "seed-button-border"
+    } seed-button-bg-${bgColor} ${fullWidth ? "seed-button-fullwidth" : ""} `}
+    {...props}
+  >
+    {children}
+  </button>
+);
 
 export default SeedButton;

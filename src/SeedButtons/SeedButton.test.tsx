@@ -9,7 +9,7 @@ describe("SeedButton Component", () => {
 
   beforeEach(() => {
     props = {
-      backgroundColor: "white",
+      bgColor: "black800",
     };
   });
 
