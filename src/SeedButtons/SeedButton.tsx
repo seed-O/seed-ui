@@ -10,14 +10,16 @@ import "../../sass/main.scss";
  */
 
 const SeedButton: React.FC<SeedButtonProps> = (
-  { bgColor = "white", fullWidth, noneBorder, children },
+  { bgColor = "white", fullWidth, noneBorder, children, color, size },
   props
 ) => (
   <button
     data-testid={`seed-button`}
     className={`seed-button  ${
       noneBorder ? "noneBorder" : "seed-button-border"
-    } seed-button-bg-${bgColor} ${fullWidth ? "seed-button-fullwidth" : ""} `}
+    } seed-button-bg-${bgColor} ${fullWidth ? "seed-button-fullwidth" : ""} ${color}
+    ${size ? `typo-${size}` : ""}
+    `}
     {...props}
   >
     {children}
