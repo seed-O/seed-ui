@@ -2,6 +2,10 @@
 @use '../abstracts/variables';
 
 //fontColor
+
+.white {
+  @include mixins.color(variables.$c-altnerativeTypo);
+}
 ///// primary
 .primary900 {
   @include mixins.color(variables.$primary-900);
@@ -201,20 +205,20 @@
   }
 
   &-blackT60 {
-    @include mixins.bgColor(variables.$c-black-T60);
+    @include mixins.bgColor(variables.$c-black-T60, variables.$c-altnerativeTypo);
   }
   &-blackT87 {
-    @include mixins.bgColor(variables.$c-defaultTypo);
+    @include mixins.bgColor(variables.$c-defaultTypo, variables.$c-altnerativeTypo);
   }
   &-blackT38 {
-    @include mixins.bgColor(variables.$c-disabledTypo);
+    @include mixins.bgColor(variables.$c-disabledTypo, variables.$c-altnerativeTypo);
   }
 
   &-blackT48 {
-    @include mixins.bgColor(variables.$black-T48);
+    @include mixins.bgColor(variables.$black-T48, variables.$c-altnerativeTypo);
   }
   &-blackT40 {
-    @include mixins.bgColor(variables.$black-T40);
+    @include mixins.bgColor(variables.$black-T40, variables.$c-altnerativeTypo);
   }
   &-blackT32 {
     @include mixins.bgColor(variables.$black-T32);

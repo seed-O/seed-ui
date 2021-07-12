@@ -13,7 +13,6 @@ interface supportColor {
 
 export interface color {color : primaryColor['primaryColor'] | blackColor['black'] | generalColor['general'] | supportColor['support']}
 
-
 export const colors = {
     primary900: "primary900",
     primary800: "primary800",
