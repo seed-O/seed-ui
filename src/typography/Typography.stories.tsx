@@ -1,40 +1,27 @@
 import React from "react";
-import Typograpy from "./Typography";
+import Typography from "./Typography";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { color, colors } from "../types/color.types";
-import { size, bold, align } from "./typography.types";
+import { bold, align } from "./typography.types";
+import { size, sizes } from "../types/standard.types";
 //@ts-ignore
+import mdx from "./Typography.mdx";
 
 export default {
-  title: "Typograpy",
-  component: Typograpy,
+  title: "Typography",
+  component: Typography,
   decorators: [withKnobs],
   parameters: {
     componentSubtitle: '"안녕하세요"라고 보여주는 컴포넌트',
+    docs: {
+      page: mdx,
+    },
   },
 };
 
 export const Seed = () => {
-  const color = select("colors", colors, "blackT87") as color["color"];
-
-  const sizes = {
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    h4: "h4",
-    h5: "h5",
-    h6: "h6",
-    s1: "s1",
-    s2: "s2",
-    body1: "body1",
-    body2: "body2",
-    button: "button",
-    caption: "caption",
-    overline: "overline",
-  };
-
+  const color = select("colors", { ...colors, undefind: undefined }, "blackT87") as color["color"];
   const size = select("sizes", sizes, "body1") as size["size"];
-
   const bolds = {
     100: "100",
     200: "200",
@@ -62,9 +49,9 @@ export const Seed = () => {
   const align = select("aligns", aligns, "left") as align["align"];
 
   return (
-    <Typograpy props={{ color: color, size: size, bold: bold, align: align }}>
+    <Typography color={color} size={size} bold={bold} align={align}>
       기본 값입니다
-    </Typograpy>
+    </Typography>
   );
 };
 

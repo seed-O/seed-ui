@@ -9,9 +9,7 @@ describe("typograpy Component", () => {
 
   beforeEach(() => {
     props = {
-      props: {
-        color: "blackT38",
-      },
+      color: "blackT38",
     };
   });
 
