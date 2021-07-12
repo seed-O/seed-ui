@@ -1,17 +1,21 @@
 import React from "react";
-import SeedButton from "./SeedButton";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs, select, text } from "@storybook/addon-knobs";
+import SeedIconButton from "./SeedIconButton";
 //@ts-ignore
-import mdx from "./SeedButton.mdx";
+import mdx from "./SeedIconButton.mdx";
 import { color, colors } from "../types/color.types";
 import { size, sizes } from "../types/standard.types";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas, IconName } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fas);
 
 export default {
-  title: "SeedButton",
-  component: SeedButton,
+  title: "SeedIconButton",
+  component: SeedIconButton,
   decorators: [withKnobs],
   parameters: {
-    componentSubtitle: '"안녕하세요"라고 보여주는 컴포넌트',
+    componentSubtitle: '"아이콘 버튼" 컴포넌트',
     docs: {
       page: mdx,
     },
@@ -24,6 +28,7 @@ export const Seed = () => {
     true: true,
     undefined: undefined,
   };
+
   const fullwidth = select("fullwidth", boolean, undefined) as boolean;
   const noneBorder = select("noneBorder", boolean, undefined) as boolean;
   const color = select(
@@ -31,21 +36,34 @@ export const Seed = () => {
     { ...colors, undefined: undefined },
     undefined
   ) as color["color"];
-  const size = select("font-size", { ...sizes, undefined: undefined }, undefined) as size["size"];
+  const size = select("font-size", { ...sizes, undefined: "h5" }, undefined) as size["size"];
+
+  const icons = text("icon", "angle-left") as IconName;
 
   return (
-    <SeedButton
+    <SeedIconButton
       bgColor={value}
       fullWidth={fullwidth}
       noneBorder={noneBorder}
       color={color}
       size={size}
-    >
-      테스트 입니다
-    </SeedButton>
+      icon={icons}
+    />
   );
 };
 
 Seed.story = {
   name: "Default",
 };
+
+// export const SeedRightIconInput = () => {
+//   return (
+//     <div>
+//       <SeedIconButton icon="coffee" />
+//     </div>
+//   );
+// };
+
+// SeedRightIconInput.story = {
+//   name: "Right-Icon-input",
+// };
