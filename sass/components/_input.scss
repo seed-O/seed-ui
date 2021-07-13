@@ -1,0 +1,70 @@
+@use '../abstracts/variables';
+
+input,
+label {
+  display: block;
+}
+
+.seed-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sub-seed-label {
+  color: variables.$c-black-T60;
+  font-size: 12px;
+}
+
+.seed-input-container {
+  display: table;
+  border-color: variables.$black-400;
+  border-width: 1px;
+  border-style: solid;
+
+  &:focus-within {
+    border-width: 1px;
+    border-style: solid;
+    border-color: variables.$primary-500;
+  }
+
+  &-border-primary-200 {
+    @include borderColor(variables.$primary-200);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.seed-input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  // &-border-primary-200 {
+  //   @include borderColor(variables.$primary-200);
+  // }
+
+  //   &::placeholder {
+  //     /* Chrome, Firefox, Opera, Safari 10.1+ */
+  //     color: red;
+  //     opacity: 1; /* Firefox */
+  //   }
+
+  //   &:-ms-input-placeholder {
+  //     /* Internet Explorer 10-11 */
+  //     color: red;
+  //   }
+
+  //   &::-ms-input-placeholder {
+  //     /* Microsoft Edge */
+  //     color: red;
+  //   }
+}
+
+.full-width {
+  width: 100%;
+}

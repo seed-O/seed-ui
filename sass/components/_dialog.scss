@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as v;
+
+.seedDialog {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  border: none;
+
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  &:not([open]) {
+    display: none;
+  }
+  & > div {
+    background-color: white;
+    border-radius: 10px;
+    color: v.$c-black-T60;
+    min-width: 240px;
+    & > h4.seedDialog-Title {
+      color: v.$c-defaultTypo;
+      margin-top: 0px;
+      margin-bottom: 15px;
+      font-size: v.$h6;
+    }
+
+    & > div.seedDialog-action {
+      text-align: right;
+      margin-top: 5px;
+    }
+  }
+}

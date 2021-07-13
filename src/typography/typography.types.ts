@@ -1,9 +1,7 @@
 import React from "react";
 import { color } from "../types/color.types";
+import { size, standardProps } from "../types/standard.types";
 
-export interface size  {
-     size : "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "s1" | "s2" | "body1" | "body2" | "button" | "caption" | "overline";  
-}
 
 export interface align { 
     align :  "center" | "left"  | "right" | "justify";
@@ -14,16 +12,12 @@ export interface bold {
 }
 
 
-export interface TypographyType<D> extends React.DetailedHTMLProps<React.HTMLAttributes<D>,D> {
-    props?: {
+export interface TypographyType<D> extends standardProps<D>{
       align?: align['align'];
       color?: color['color'];
       display?: 'initial' | 'block' | 'inline';
       bold?:bold['bold'];
       size?:size['size'];
-    };
-
-    classKey?: size;
   }
 
 /* 

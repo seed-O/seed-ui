@@ -1,1 +1,57 @@
+@use '../base/color' as c;
+@use '../abstracts/mixins';
 @import "../abstracts/variables";
+
+.seed-button {
+  background-color: black;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 19px;
+  color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.15);
+  }
+  &:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &:active {
+    &:after {
+      height: 5px;
+      width: 5px;
+      opacity: 1;
+      transition: 0s;
+    }
+
+    // animation: ripple;
+  }
+
+  &-border {
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+  &-bg {
+    @include c.bg;
+  }
+
+  &-fullwidth {
+    @include mixins.fullWidth;
+  }
+}
