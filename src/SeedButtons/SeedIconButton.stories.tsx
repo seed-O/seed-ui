@@ -37,9 +37,8 @@ export const Seed = () => {
     undefined
   ) as color["color"];
   const size = select("font-size", { ...sizes, undefined: "h5" }, undefined) as size["size"];
-
+  const padding = text("padding", undefined);
   const icons = text("icon", "angle-left") as IconName;
-
   return (
     <SeedIconButton
       bgColor={value}
@@ -47,23 +46,24 @@ export const Seed = () => {
       noneBorder={noneBorder}
       color={color}
       size={size}
+      padding={padding}
       icon={icons}
     />
   );
 };
 
 Seed.story = {
-  name: "Default",
+  name: "angle-left icon",
 };
 
-// export const SeedRightIconInput = () => {
-//   return (
-//     <div>
-//       <SeedIconButton icon="coffee" />
-//     </div>
-//   );
-// };
+export const SeedIconTimes = () => {
+  return (
+    <div>
+      <SeedIconButton icon="times" />
+    </div>
+  );
+};
 
-// SeedRightIconInput.story = {
-//   name: "Right-Icon-input",
-// };
+SeedIconTimes.story = {
+  name: "Icon-times",
+};

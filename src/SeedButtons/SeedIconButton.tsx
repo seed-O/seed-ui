@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 /**
  * Seed-ui의 Default 버튼
  *
- * - **backgroundColor** 설정 props `white`, `black`
+ *  fontawesomeicon solid 무료 버젼만 사용가능
  *
  */
 
